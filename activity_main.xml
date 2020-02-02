@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_margin="@dimen/_10sdp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/header13x"
+        android:id="@+id/LLmain"
+        android:onClick="hidekeyboard">
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/logo3x"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pleas Sign-Up to continue"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark" />
+        <RelativeLayout
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_white"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:hint="First Name"
+                android:background="@null"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:id="@+id/etFName"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:id="@+id/v0"
+                android:layout_below="@+id/etFName"
+                android:background="@color/md_grey_300"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:hint="Last Name"
+                android:background="@null"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_below="@+id/v0"
+                android:id="@+id/etLName"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:id="@+id/v1"
+                android:layout_below="@+id/etLName"
+                android:background="@color/md_grey_300"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:hint="Country"
+                android:background="@null"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_below="@+id/v1"
+                android:id="@+id/etCountry"
+                android:inputType="number"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:id="@+id/v2"
+                android:layout_below="@+id/etCountry"
+                android:background="@color/md_grey_300"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:hint="Email Adress"
+                android:background="@null"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:id="@+id/etEmail"
+                android:layout_below="@+id/v2"
+                android:inputType="textEmailAddress" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:id="@+id/v3"
+                android:layout_below="@+id/etEmail"
+                android:background="@color/md_grey_300"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@null"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:hint="Password"
+                android:id="@+id/etPassword"
+                android:layout_below="@+id/v3"
+                android:inputType="textPassword"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:id="@+id/v4"
+                android:layout_below="@+id/etPassword"
+                android:background="@color/md_grey_300"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v4"
+                android:gravity="center_vertical"
+                android:id="@+id/LLphone"
+                >
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:ccp_defaultNameCode="US"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@null"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:hint="Phone Number"
+                    android:id="@+id/etPhone"
+                    android:textSize="@dimen/_8sdp"
+                    android:inputType="phone"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:id="@+id/v5"
+                android:layout_below="@+id/LLphone"
+                android:background="@color/md_grey_300"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@null"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:hint="User Type"
+                android:id="@+id/etUtype"
+                android:layout_below="@+id/v5" />
+
+
+
+        </RelativeLayout>
+        <Button
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Sign-Up"
+            android:textColor="@color/colorPrimaryWhite"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_corners_primery"
+            android:id="@+id/btnSignUp" />
+        <LinearLayout
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By Signing-up,You Agree To The "
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_8sdp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms conditions"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/high_blue_900"
+                android:textStyle="bold"
+                android:textSize="@dimen/_9sdp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
